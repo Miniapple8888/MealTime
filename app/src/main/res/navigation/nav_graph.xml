@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mealPlans">
+
+    <fragment
+        android:id="@+id/mealPlans"
+        android:name="com.example.mealtime.MealPlanCalendar"
+        android:label="fragment_meal_plan_calendar"
+        tools:layout="@layout/fragment_meal_plan_calendar" >
+        <action
+            android:id="@+id/action_mealPlanCalendar_to_mealItem"
+            app:destination="@id/mealItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealItem"
+        android:name="com.example.mealtime.MealItem"
+        android:label="fragment_meal_item"
+        tools:layout="@layout/fragment_meal_item" />
+</navigation>
