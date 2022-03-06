@@ -5,13 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
-import com.example.mealtime.R
 import com.example.mealtime.databinding.SettingFragmentBinding
-
 
 class SettingFragment : Fragment() {
 
@@ -35,10 +30,13 @@ class SettingFragment : Fragment() {
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            settingFragment = this@SettingFragment
+            setting = this@SettingFragment
         }
     }
 
+//    fun sendOrder() {
+//        Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
+//    }
 
     /**
      * This fragment lifecycle method is called when the view hierarchy associated with the fragment

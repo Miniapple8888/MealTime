@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class OnboardingViewModel : ViewModel() {
-    private val _dietary = MutableLiveData<ArrayList<String>>()
-    val dietary: LiveData<ArrayList<String>> = _dietary
+    private val _dietary = MutableLiveData<String>()
+    val dietary: LiveData<String> = _dietary
 
     private val _calorie = MutableLiveData<String>("1000-1500")
     val calorie: LiveData<String> = _calorie
@@ -27,7 +27,7 @@ class OnboardingViewModel : ViewModel() {
 
 
     fun setDietary(desiredDietaries: ArrayList<String>) {
-        _dietary.value = desiredDietaries
+        _dietary.value = desiredDietaries.joinToString()
     }
 
     fun setCalorie(desiredCalorie: String) {
@@ -47,7 +47,7 @@ class OnboardingViewModel : ViewModel() {
     }
 
     fun resetPref() {
-        _dietary.value = arrayListOf()
+        _dietary.value = ""
         _calorie.value = "1000-1500"
         _macro.value = "40/30/30"
         _budget.value = "low"
