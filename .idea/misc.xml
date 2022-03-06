@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/budget_fragment.xml" value="0.25" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/calorie_fragment.xml" value="0.14666666666666667" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/dietary_fragment.xml" value="0.3333333333333333" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/fragment_calorie.xml" value="0.17916666666666667" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/macro_fragment.xml" value="0.17916666666666667" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/main_activity.xml" value="0.11548913043478261" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/onboard_start_fragment.xml" value="0.16666666666666666" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/setting_fragment.xml" value="0.14666666666666667" />
+        <entry key="..\:/Projects/Kotlin/app/src/main/res/layout/time_fragment.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
