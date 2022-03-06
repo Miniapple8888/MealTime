@@ -54,5 +54,14 @@
         android:id="@+id/timeFragment"
         android:name="com.example.mealtime.ui.onboarding.TimeFragment"
         android:label="Choose Prepping Time"
-        tools:layout="@layout/time_fragment" />
+        tools:layout="@layout/time_fragment" >
+        <action
+            android:id="@+id/action_timeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.mealtime.ui.onboarding.SettingFragment"
+        android:label="Preference Overview"
+        tools:layout="@layout/setting_fragment" />
 </navigation>

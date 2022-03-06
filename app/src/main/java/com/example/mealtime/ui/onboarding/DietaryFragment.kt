@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.mealtime.R
@@ -76,7 +75,6 @@ class DietaryFragment : Fragment() {
 
     fun chooseDietary() {
 
-        Toast.makeText(activity,"Select $finalDietary",Toast.LENGTH_SHORT).show()
         sharedViewModel.setDietary(finalDietary)
         finalDietary.clear()
         findNavController().navigate(R.id.action_dietaryFragment_to_calorieFragment)

@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -47,8 +45,8 @@ class TimeFragment : Fragment() {
                 }
             }
 
-            Toast.makeText(activity,"Select $desiredTime", Toast.LENGTH_SHORT).show()
             sharedViewModel.setTime(desiredTime)
+            findNavController().navigate(R.id.action_timeFragment_to_settingFragment)
         }
 
         return binding.root

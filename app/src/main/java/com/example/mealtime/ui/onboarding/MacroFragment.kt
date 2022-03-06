@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -45,7 +44,6 @@ class MacroFragment : Fragment() {
                 }
             }
 
-            Toast.makeText(activity,"Select $desiredMacro", Toast.LENGTH_SHORT).show()
             sharedViewModel.setMacro(desiredMacro)
             findNavController().navigate(R.id.action_macroFragment_to_budgetFragment)
         }
