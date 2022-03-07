@@ -19,4 +19,14 @@
         android:name="com.example.mealtime.MealItem"
         android:label="fragment_meal_item"
         tools:layout="@layout/fragment_meal_item" />
+    <fragment
+        android:id="@+id/ingredientsList"
+        android:name="com.example.mealtime.groceryList"
+        android:label="fragment_grocery_list"
+        tools:layout="@layout/fragment_grocery_list" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.mealtime.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

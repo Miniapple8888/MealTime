@@ -3,23 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_item_list.xml" value="0.152" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_meal_item.xml" value="0.3645833333333333" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_meal_item_group.xml" value="0.264" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_meal_plan_calendar.xml" value="0.264" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/ingredients.xml" value="0.4" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/list_meal_item.xml" value="0.264" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/recipe.xml" value="0.467444120505345" />
-        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/menu/bottom_menu.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/activity_main.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_meal_item.xml" value="0.264" />
+        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/fragment_meal_item_group.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/emily/AndroidStudioProjects/MealTime/app/src/main/res/layout/list_meal_item.xml" value="0.6" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
