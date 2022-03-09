@@ -1,23 +1,25 @@
 package com.example.loginandregister
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-
+/*
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
+*/
 /**
  * A simple [Fragment] subclass.
  * Use the [Login.newInstance] factory method to
  * create an instance of this fragment.
  */
 class Login : Fragment() {
+    /*
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,15 +31,53 @@ class Login : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+*/
+    private lateinit var email: EditText
+    private lateinit var passwrd: EditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        var view = inflater.inflate(R.layout.fragment_login, container, false)
+
+        email = view.findViewById(R.id.logEmail)
+        passwrd = view.findViewById(R.id.logPassword)
+
+        view.findViewById<Button>(R.id.logSignUpBtn).setOnClickListener {
+            var navRegister = activity as FragmentNavigation
+            navRegister.navigateFrag(Register(), false)
+        }
+
+        view.findViewById<Button>(R.id.logLoginBtn).setOnClickListener {
+            validateEmptyForm()
+        }
+
+        return view
     }
 
+    private fun validateEmptyForm() {
+        when {
+            TextUtils.isEmpty(email.text.toString().trim())->{
+                email.error = "Please enter email"
+            }
+            TextUtils.isEmpty(passwrd.text.toString().trim())->{
+                passwrd.error = "Please enter password"
+            }
+
+            email.text.toString().isNotEmpty() &&
+                    passwrd.text.toString().isNotEmpty() -> {
+                if (email.text.toString() matches (Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"))) {
+
+                } else {
+                    email.error = "Please enter valid email address"
+                }
+            }
+        }
+    }
+}
+/*
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -57,7 +97,8 @@ class Login : Fragment() {
                 }
             }
     }
-}
+
+}*/
 /*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

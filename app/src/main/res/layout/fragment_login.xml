@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/signIn"
+            android:id="@+id/logSignInHead"
             android:text="Sign In"
             android:textColor="@color/black"
             android:textSize="35dp"
@@ -24,7 +24,7 @@
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/logEmail"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:background="#30ffffff"
@@ -40,7 +40,7 @@
             android:layout_marginBottom="10dp"/>
 
         <EditText
-            android:id="@+id/password"
+            android:id="@+id/logPassword"
             android:background="#30ffffff"
             android:ems="10"
             android:hint="Password"
@@ -56,7 +56,7 @@
             android:layout_marginBottom="10dp"/>
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/logLoginBtn"
             android:backgroundTint="#E53B3B"
             android:padding="20dp"
             android:text="Login"
@@ -69,7 +69,7 @@
             android:layout_marginBottom="10dp" />
 
         <LinearLayout
-            android:id="@+id/signUp"
+            android:id="@+id/logSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -77,14 +77,14 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/signUpText"
+                android:id="@+id/logSignUpText"
                 android:text="New to MealTime? "
                 android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <Button
-                android:id="@+id/signUpLink"
+                android:id="@+id/logSignUpBtn"
                 android:text="Sign up"
                 android:textColor="#E53B3B"
                 android:textAllCaps="false"
@@ -94,16 +94,15 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/forgotPass"
+            android:id="@+id/logForgotPass"
             android:text="Forgot password?"
             android:textColor="#E53B3B"
             android:textAllCaps="false"
             android:backgroundTint="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_margin="20dp"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>
