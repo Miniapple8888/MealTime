@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MealTime</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="today_date">Mon, Feb 21</string>
     <string name="meal_plan">Meal Plan</string>
     <string name="ingredients_list">Ingredients List</string>
@@ -24,7 +23,6 @@
     <string name="_5_cups">5 cups</string>
     <string name="step_number">1.</string>
     <string name="instruction">Pour water into the pot.</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
