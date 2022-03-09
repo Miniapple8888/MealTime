@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mealtime.ui.onboarding.DietaryFragment">
+
+    <data>
+        <variable
+            name="dietary"
+            type="com.example.mealtime.ui.onboarding.DietaryFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dietaryFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dietaryQuestionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="sans-serif"
+                android:text="@{dietary.question}"
+                android:textSize="38sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="When can I finish..." />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#C4C4C4"
+                android:text="Next"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dietaryQuestionText"
+                app:layout_constraintVertical_bias="0.751" />
+
+            <CheckBox
+                android:id="@+id/Dietary1CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[0]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/Dietary2CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dietaryQuestionText"
+                tools:text="0" />
+
+            <CheckBox
+                android:id="@+id/Dietary2CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[1]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/Dietary3CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dietary1CB"
+                tools:text="1" />
+
+            <CheckBox
+                android:id="@+id/Dietary3CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[2]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/Dietary4CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dietary2CB"
+                tools:text="2" />
+
+            <CheckBox
+                android:id="@+id/Dietary4CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[3]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/Dietary5CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dietary3CB"
+                tools:text="3" />
+
+            <CheckBox
+                android:id="@+id/Dietary5CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[4]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/Dietary6CB"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dietary4CB"
+                tools:text="4" />
+
+            <CheckBox
+                android:id="@+id/Dietary6CB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{dietary.answers[5]}"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/nextButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Dietary5CB"
+                tools:text="5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
