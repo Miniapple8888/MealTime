@@ -1,4 +1,4 @@
-package com.example.loginandregister
+package com.example.mealtime
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+
 /*
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

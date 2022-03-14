@@ -1,4 +1,4 @@
-package com.example.loginandregister
+package com.example.mealtime
 
 import androidx.fragment.app.Fragment
 
