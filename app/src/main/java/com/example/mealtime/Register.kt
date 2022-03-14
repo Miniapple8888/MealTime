@@ -1,4 +1,4 @@
-package com.example.loginandregister
+package com.example.mealtime
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,11 +14,7 @@ import android.text.TextUtils
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 */
-/**
- * A simple [Fragment] subclass.
- * Use the [Register.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class Register : Fragment() {
     /*
     // TODO: Rename and change types of parameters
@@ -35,7 +31,7 @@ class Register : Fragment() {
 
     private lateinit var firstName: EditText
     private lateinit var email: EditText
-    private lateinit var passwrd: EditText
+    private lateinit var password: EditText
     private lateinit var cnfPassword: EditText
 
     override fun onCreateView(
@@ -47,7 +43,7 @@ class Register : Fragment() {
 
         firstName = view.findViewById(R.id.regFirstName)
         email = view.findViewById(R.id.regEmail)
-        passwrd = view.findViewById(R.id.regPassword)
+        password = view.findViewById(R.id.regPassword)
         cnfPassword = view.findViewById(R.id.regConfirmPassword)
 
         view.findViewById<Button>(R.id.regLoginBtn).setOnClickListener {
@@ -68,25 +64,25 @@ class Register : Fragment() {
             TextUtils.isEmpty(email.text.toString().trim())->{
                 email.error = "Please enter email"
             }
-            TextUtils.isEmpty(passwrd.text.toString().trim())->{
-                passwrd.error = "Please enter password"
+            TextUtils.isEmpty(password.text.toString().trim())->{
+                password.error = "Please enter password"
             }
             TextUtils.isEmpty(cnfPassword.text.toString().trim())->{
                 cnfPassword.error = "Please enter confirm password"
             }
 
             email.text.toString().isNotEmpty() &&
-            passwrd.text.toString().isNotEmpty() &&
+            password.text.toString().isNotEmpty() &&
             cnfPassword.text.toString().isNotEmpty() -> {
                 if (email.text.toString() matches (Regex("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+(\\s*)"))) {
-                    if (passwrd.text.toString().length >= 5) {
-                        if (passwrd.text.toString() == cnfPassword.text.toString()) {
+                    if (password.text.toString().length >= 5) {
+                        if (password.text.toString() == cnfPassword.text.toString()) {
                             Toast.makeText(context, "Sign up success!", Toast.LENGTH_LONG).show()
                         } else {
                             cnfPassword.setError("Passwords do not match")
                         }
                     } else {
-                        passwrd.setError("Please enter valid password (at least 5 characters)")
+                        password.setError("Please enter valid password (at least 5 characters)")
                     }
                 } else {
                     email.setError("Please enter valid email address")
