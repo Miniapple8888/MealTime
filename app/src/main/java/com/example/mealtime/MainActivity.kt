@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity(), FragmentNavigation {
         val binding = DataBindingUtil.setContentView<MainActivityBinding>(this, R.layout.main_activity)
         val navController = this.findNavController(R.id.onboardingNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
+        setContentView(R.layout.activity_main)
         supportFragmentManager.beginTransaction()
             .add(R.id.container, Login())
             .commit()
