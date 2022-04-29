@@ -33,6 +33,9 @@ class groceryList : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        if (container != null) {
+            container.removeAllViews();
+        }
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_grocery_list, container, false)
     }

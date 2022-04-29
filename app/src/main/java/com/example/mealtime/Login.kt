@@ -40,6 +40,9 @@ class Login : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        if (container != null) {
+            container.removeAllViews();
+        }
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_login, container, false)
 

@@ -3,8 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mealPlans">
+    app:startDestination="@id/homePage">
 
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.mealtime.ui.onboarding.SettingFragment"
+        android:label="Preference Overview"
+        tools:layout="@layout/setting_fragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_mealPlans"
+            app:destination="@id/mealPlans" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeFragment"
+        android:name="com.example.mealtime.ui.onboarding.TimeFragment"
+        android:label="Choose Prepping Time"
+        tools:layout="@layout/time_fragment">
+        <action
+            android:id="@+id/action_timeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.example.mealtime.ui.onboarding.BudgetFragment"
+        android:label="Choose Budget"
+        tools:layout="@layout/budget_fragment">
+        <action
+            android:id="@+id/action_budgetFragment_to_timeFragment"
+            app:destination="@id/timeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/macroFragment"
+        android:name="com.example.mealtime.ui.onboarding.MacroFragment"
+        android:label="Choose Macro Diet"
+        tools:layout="@layout/macro_fragment">
+        <action
+            android:id="@+id/action_macroFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calorieFragment"
+        android:name="com.example.mealtime.ui.onboarding.CalorieFragment"
+        android:label="Choose Calorie"
+        tools:layout="@layout/calorie_fragment">
+        <action
+            android:id="@+id/action_calorieFragment_to_macroFragment"
+            app:destination="@id/macroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardStartFragment"
+        android:name="com.example.mealtime.ui.onboarding.OnboardStartFragment"
+        android:label="Meal Time Onboarding"
+        tools:layout="@layout/onboard_start_fragment">
+        <action
+            android:id="@+id/action_onboardStartFragment_to_dietaryFragment"
+            app:destination="@id/dietaryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mealPlans"
         android:name="com.example.mealtime.MealPlanCalendar"
@@ -29,4 +83,39 @@
         android:name="com.example.mealtime.settings"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.mealtime.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_onboardStartFragment"
+            app:destination="@id/onboardStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dietaryFragment"
+        android:name="com.example.mealtime.ui.onboarding.DietaryFragment"
+        android:label="Choose Dietary"
+        tools:layout="@layout/dietary_fragment">
+        <action
+            android:id="@+id/action_dietaryFragment_to_calorieFragment"
+            app:destination="@id/calorieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.mealtime.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.mealtime.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_homePage_to_register"
+            app:destination="@id/register" />
+    </fragment>
 </navigation>
